@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samwell — Privacy Policy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f8f5; color: #1a2e1c; line-height: 1.7; }
+    .header { background: #1a2e1c; padding: 48px 24px 36px; text-align: center; }
+    .header h1 { font-family: Georgia, serif; font-size: 36px; color: #c8d8c0; letter-spacing: 4px; margin-bottom: 8px; }
+    .header h2 { font-size: 18px; font-weight: 400; color: #7dc87d; margin-bottom: 8px; }
+    .header p { font-size: 13px; color: rgba(200,216,192,0.5); }
+    .container { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+    h2 { font-size: 20px; font-weight: 700; color: #1a2e1c; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 2px solid #c8d8c0; }
+    h3 { font-size: 16px; font-weight: 600; color: #2d7a4f; margin: 24px 0 8px; }
+    p { font-size: 15px; color: #2a3e2c; margin-bottom: 14px; }
+    ul { margin: 8px 0 16px 20px; }
+    ul li { font-size: 15px; color: #2a3e2c; margin-bottom: 6px; }
+    .disclaimer { background: #eef5ec; border-left: 4px solid #2d7a4f; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 24px 0; }
+    .disclaimer p { font-size: 14px; margin: 0; }
+    .contact-block { background: #1a2e1c; border-radius: 12px; padding: 24px; margin-top: 40px; }
+    .contact-block p { color: #c8d8c0; margin-bottom: 8px; font-size: 14px; }
+    .contact-block a { color: #7dc87d; text-decoration: none; }
+    .footer { text-align: center; padding: 32px 24px; font-size: 12px; color: #9aa89a; border-top: 1px solid #c8d8c0; margin-top: 40px; }
+  </style>
+</head>
+<body>
+<div class="header">
+  <h1>SAMWELL</h1>
+  <h2>Privacy Policy</h2>
+  <p>Effective Date: March 25, 2026</p>
+</div>
+
+<div class="container">
+
+  <h2>1. Introduction</h2>
+  <p>Samwell ("we," "us," or "our") is a mobile application designed to help freelancers, independent contractors, and gig workers organize their tax-related information year-round. This Privacy Policy explains exactly how we collect, use, store, and protect your personal information when you use the Samwell app.</p>
+  <p>By creating an account or using the App, you agree to the practices described in this Privacy Policy. If you do not agree, do not use the App. This App is intended for use by adults aged 18 and older in the United States.</p>
+
+  <h2>2. Information We Collect</h2>
+
+  <h3>2.1 Account Information</h3>
+  <p>When you create an account we collect only two pieces of information: your email address and your password. Your password is never stored by Samwell — it is hashed server-side by our authentication provider (Supabase) using bcrypt and we never have access to it. Supabase's infrastructure also receives your IP address and device user-agent as part of the HTTP authentication request.</p>
+
+  <h3>2.2 Profile Information</h3>
+  <p>Once you create an account you may optionally provide a display name, filing status, home office square footage, and tax year preference. This information is stored in your profile and used to personalize your experience.</p>
+
+  <h3>2.3 Survey Responses</h3>
+  <p>When you complete the Samwell onboarding survey, we store two things derived from your answers. First, your individual yes or no response to each survey question is stored, keyed by question identifier. No free-text input is collected — all survey questions are yes/no only. Second, a set of boolean tags derived from your answers (for example is_1099: true or has_home_office: true) is stored in your profile. These tags are used exclusively to personalize your checklist tasks, deduction estimates, and tax overview within the App.</p>
+
+  <h3>2.4 Tax Estimates</h3>
+  <p>Based on your survey responses we calculate and store estimated deduction amounts organized by category: home office, travel, equipment, software and technology, and a combined other category covering health insurance, retirement contributions, dependent care, charitable giving, medical expenses, education, and student loan interest. We also store your total estimated deductions, a potential savings estimate (calculated as total deductions multiplied by a flat 22% marginal rate), and an IRS readiness score (a count of deductions you said yes to). These are estimates only and are not precise tax calculations.</p>
+
+  <h3>2.5 What Stays On Your Device vs What Goes to the Cloud</h3>
+  <p>Samwell is designed with a local-first approach for sensitive financial data. The following never leaves your device: receipt images and photographs, in-progress survey state, and all UI and animation state. The following is synced to our secure cloud servers solely to enable your experience across app sessions: your account credentials (email, hashed password), profile preferences, survey yes/no responses and derived tags, estimated deduction totals by category, and checklist completion records. We do not sync raw financial account data, income figures, or any sensitive personally identifiable financial information beyond what is described in this policy.</p>
+  <h3>2.6 Receipt Metadata</h3>
+  <p>When you log a receipt in the Shoebox feature we collect the expense category, a rounded dollar amount (whole dollars only), an optional short description of up to 100 characters, and an optional receipt date.</p>
+  <div class="disclaimer">
+    <p><strong>Important:</strong> Receipt images and photographs are never transmitted to our servers. If you use the camera or photo library to scan a receipt, the image is processed entirely on your device and is lost when you close the App.</p>
+  </div>
+
+  <h3>2.7 Checklist Completion Records</h3>
+  <p>When you check off a task in the monthly checklist we immediately store a record keyed by your user ID, tax year, month, and task identifier. This allows the App to restore your progress when you reopen it.</p>
+
+  <h3>2.8 Session Data</h3>
+  <p>When you sign in, a session token is stored on your device using local storage. This token contains your user ID, email address, account role, and token expiry timestamp. It is used solely to maintain your login session between app opens and is automatically cleared when you sign out.</p>
+
+  <h3>2.9 What We Do NOT Collect</h3>
+  <p>We explicitly do not collect, store, or process any of the following:</p>
+  <ul>
+    <li>Social Security Numbers or Taxpayer Identification Numbers</li>
+    <li>Bank account numbers, routing numbers, or credit/debit card numbers</li>
+    <li>Actual income amounts or precise financial account balances</li>
+    <li>Receipt images or photographs — these never leave your device</li>
+    <li>Location data — we do not collect or track your location</li>
+    <li>Biometric data of any kind</li>
+    <li>Device advertising identifiers</li>
+    <li>Any data from or about children under the age of 13</li>
+    <li>Microphone, contacts, calendar, or health data</li>
+  </ul>
+
+  <h2>3. How We Use Your Information</h2>
+  <p>We use the information we collect solely to provide and improve the Samwell App:</p>
+  <ul>
+    <li>To create and manage your account and authenticate your identity</li>
+    <li>To personalize your deduction estimates, checklist tasks, and tax overview based on your survey responses</li>
+    <li>To restore your checklist progress and receipt history when you reopen the App</li>
+    <li>To send account-related emails such as email verification and password reset messages</li>
+    <li>To display your tax organization data within the App</li>
+  </ul>
+  <p>We do not use your information for targeted advertising. We do not sell, rent, or share your personal information with any third party for marketing purposes.</p>
+
+  <h2>4. Tax Summary Export</h2>
+  <p>The App includes a Share Summary feature that generates a plain-text summary of your estimated deductions and logged receipt totals. This summary is shared via your device's native share sheet and is generated entirely on your device. No data is transmitted to Samwell's servers during this process. The exported text contains your tax year, generation date, receipt totals by category, and individual receipt line items. It does not contain your email address, user ID, or any account credentials.</p>
+
+  <h2>5. How We Store and Protect Your Information</h2>
+
+  <h3>5.1 Data Storage and Processor</h3>
+  <p>Your data is stored on servers provided by Supabase, Inc., our sole data processor. Supabase operates infrastructure in the United States. By using Samwell, you consent to the transfer and storage of your data in the United States. Supabase's privacy practices are available at https://supabase.com/privacy.</p>
+
+  <h3>5.2 Security Measures</h3>
+  <ul>
+    <li>Row-Level Security (RLS) enforced at the database level — each user can only access their own data</li>
+    <li>Transport Layer Security (TLS) — all data transmitted between the App and our servers is encrypted in transit</li>
+    <li>Bcrypt password hashing — passwords are never stored in plaintext</li>
+    <li>JWT session tokens — access tokens automatically refresh and expire within one hour</li>
+    <li>No service-role database keys in the client — the App uses only a public anon key</li>
+  </ul>
+
+  <h3>5.3 Data Retention</h3>
+  <p>We retain your personal data for as long as your account is active. If you delete your account, all of your data is permanently deleted from our active database. Because Supabase maintains automated infrastructure backups, residual data may persist in encrypted backups for up to 7 days following deletion before being purged.</p>
+
+  <h2>6. Your Rights and Choices</h2>
+
+  <h3>6.1 Access and Correction</h3>
+  <p>You can view and update your profile information directly within the App at any time. For a complete data export, contact us at samwellapp@gmail.com.</p>
+
+  <h3>6.2 Deletion</h3>
+  <p>You can permanently delete your account and all associated data at any time directly within the App by going to Profile &gt; Delete Account. This action is immediate and irreversible. Upon deletion, all your data including profile information, survey responses, tax estimates, receipts, and checklist records is permanently removed from our systems. You may also request deletion by emailing samwellapp@gmail.com and we will process your request within 30 days.</p>
+
+  <h3>6.3 Data Portability</h3>
+  <p>You may request a copy of your data in a portable format by contacting us at samwellapp@gmail.com. We will respond within 30 days.</p>
+
+  <h3>6.4 California Residents (CCPA)</h3>
+  <p>California residents have the right to know what personal information is collected, the right to delete personal information, the right to opt out of the sale of personal information (we do not sell personal information), and the right to non-discrimination for exercising privacy rights. Contact us at samwellapp@gmail.com to exercise these rights.</p>
+
+  <h2>7. Third-Party Services</h2>
+  <p>Samwell uses one third-party service: Supabase, Inc., which provides our database, authentication, and backend infrastructure. No other third-party services are used. We do not use analytics tools, advertising networks, crash reporting services, or any tracking SDKs. The only outbound network traffic from the App goes to Supabase.</p>
+
+  <h2>8. Children's Privacy</h2>
+  <p>Samwell is intended for use by adults aged 18 and older. The App is not directed to children under the age of 13 and we do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has provided personal information, we will delete it immediately. Contact us at samwellapp@gmail.com if you believe a child under 13 has used the App.</p>
+
+  <h2>9. Not Financial or Tax Advice</h2>
+  <div style="background:#fff3cd;border:2px solid #e6a817;border-radius:8px;padding:20px 24px;margin:24px 0;">
+    <p style="font-size:13px;font-weight:700;letter-spacing:0.5px;color:#7a4f00;margin-bottom:10px;">⚠ IMPORTANT DISCLAIMER — PLEASE READ</p>
+    <p style="font-size:14px;color:#2a3e2c;margin-bottom:10px;"><strong>SAMWELL IS NOT A TAX PREPARATION SERVICE, TAX ADVISOR, CERTIFIED PUBLIC ACCOUNTANT, ENROLLED AGENT, OR FINANCIAL INSTITUTION.</strong></p>
+    <p style="font-size:14px;color:#2a3e2c;margin-bottom:10px;">ALL DEDUCTION ESTIMATES, POTENTIAL SAVINGS FIGURES, IRS READINESS SCORES, AND RELATED CALCULATIONS ARE ESTIMATES ONLY. They are based on IRS-published rates and national averages — not on your actual income, expenses, or individual tax situation.</p>
+    <p style="font-size:14px;color:#2a3e2c;margin:0;">These figures do not constitute tax advice, financial advice, legal advice, or accounting advice of any kind. <strong>Always consult a qualified tax professional or CPA before making any tax-related decisions or filing any tax return.</strong></p>
+  </div>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. When we make material changes we will update the Effective Date and notify you via email or in-app notification. Continued use after notice constitutes acceptance.</p>
+
+  <h2>11. Contact Us</h2>
+  <div class="contact-block">
+    <p><strong style="color:#7dc87d">Email:</strong> <a href="mailto:samwellapp@gmail.com">samwellapp@gmail.com</a></p>
+    <p><strong style="color:#7dc87d">Website:</strong> <a href="https://mohanx-cloud.github.io/Samwell-Legal">https://mohanx-cloud.github.io/Samwell-Legal</a></p>
+    <p><strong style="color:#7dc87d">Location:</strong> Austin, Texas, United States</p>
+  </div>
+
+</div>
+<div class="footer">
+  <p>© 2026 Samwell. All rights reserved. · <a href="privacy" style="color:#2d7a4f">Privacy Policy</a> · <a href="terms" style="color:#2d7a4f">Terms of Service</a></p>
+</div>
+</body>
+</html>
