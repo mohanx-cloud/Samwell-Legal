@@ -21,41 +21,32 @@
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+body { font-family: "DM Sans", sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  padding: 0 60px; height: 68px;
-  display: flex; align-items: center; justify-content: space-between;
-  background: rgba(242,247,242,0.88); backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-}
-.nav-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--forest); text-decoration: none; letter-spacing: 0.3px; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 60px; height: 68px; display: flex; align-items: center; justify-content: space-between; background: rgba(242,247,242,0.88); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+.nav-logo { font-family: "Playfair Display", serif; font-size: 20px; font-weight: 700; color: var(--forest); text-decoration: none; }
 .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-.nav-links a { font-size: 13.5px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; letter-spacing: 0.1px; }
+.nav-links a { font-size: 13.5px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; }
 .nav-links a:hover { color: var(--forest); }
-.nav-cta { background: var(--forest) !important; color: var(--sage) !important; padding: 9px 22px; border-radius: 8px; font-weight: 600 !important; font-size: 13px !important; transition: background 0.2s, transform 0.15s !important; letter-spacing: 0.2px; }
-.nav-cta:hover { background: var(--mid) !important; transform: translateY(-1px); }
+.nav-cta { background: var(--forest) !important; color: var(--sage) !important; padding: 9px 22px; border-radius: 8px; font-weight: 600 !important; font-size: 13px !important; transition: background 0.2s !important; }
+.nav-cta:hover { background: var(--mid) !important; }
 
 .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 100px 72px 80px; gap: 48px; position: relative; overflow: hidden; }
-.hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(45,122,79,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(45,122,79,0.04) 1px, transparent 1px); background-size: 48px 48px; pointer-events: none; }
-.hero::after { content: ''; position: absolute; top: -200px; right: -200px; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(45,122,79,0.06) 0%, transparent 65%); pointer-events: none; }
+.hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(45,122,79,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(45,122,79,0.04) 1px, transparent 1px); background-size: 48px 48px; pointer-events: none; }
+.hero::after { content: ""; position: absolute; top: -200px; right: -200px; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(45,122,79,0.06) 0%, transparent 65%); pointer-events: none; }
 
-@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
-
-h1 { font-family: 'Playfair Display', serif; font-size: clamp(48px, 5.8vw, 76px); font-weight: 900; line-height: 1.04; color: var(--forest); margin-bottom: 24px; letter-spacing: -0.5px; }
+h1 { font-family: "Playfair Display", serif; font-size: clamp(48px, 5.8vw, 76px); font-weight: 900; line-height: 1.04; color: var(--forest); margin-bottom: 24px; letter-spacing: -0.5px; }
 h1 em { font-style: italic; color: var(--mid); }
 .hero-sub { font-size: 18.5px; color: var(--muted); line-height: 1.75; margin-bottom: 40px; max-width: 480px; font-weight: 400; }
 .hero-btns { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 44px; }
 
-.btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--forest); color: var(--sage); padding: 16px 32px; border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none; letter-spacing: 0.2px; transition: all 0.2s; box-shadow: 0 4px 16px rgba(26,46,28,0.18), 0 1px 3px rgba(26,46,28,0.12); }
-.btn-primary:hover { background: var(--mid); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,46,28,0.22); }
+.btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--forest); color: var(--sage); padding: 16px 32px; border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 16px rgba(26,46,28,0.18); }
+.btn-primary:hover { background: var(--mid); transform: translateY(-2px); }
 .btn-ghost { display: inline-flex; align-items: center; gap: 6px; color: var(--forest); font-size: 15px; font-weight: 500; text-decoration: none; padding: 16px 4px; border-bottom: 1.5px solid rgba(26,46,28,0.15); transition: all 0.2s; }
 .btn-ghost:hover { color: var(--mid); border-color: var(--mid); }
 
 .trust-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
 .trust-chip { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--muted); }
-.trust-chip svg { opacity: 0.6; }
 
 .hero-visual { display: flex; justify-content: center; align-items: center; position: relative; z-index: 1; }
 .phones { position: relative; width: 320px; height: 600px; }
@@ -63,37 +54,37 @@ h1 em { font-style: italic; color: var(--mid); }
 .phone-a img { width: 100%; display: block; margin-top: -5%; }
 .phone-b { position: absolute; bottom: 10px; right: 0; width: 158px; border-radius: 26px; overflow: hidden; box-shadow: 0 0 0 6px #2d7a4f, 0 0 0 7px rgba(125,200,125,0.2), 0 20px 48px rgba(26,46,28,0.3); z-index: 3; }
 .phone-b img { width: 100%; display: block; margin-top: -5%; }
-.float-card { position: absolute; background: white; border-radius: 12px; padding: 11px 16px; box-shadow: 0 8px 28px rgba(26,46,28,0.1), 0 2px 8px rgba(26,46,28,0.06); z-index: 4; border: 1px solid rgba(200,216,192,0.3); }
+.float-card { position: absolute; background: white; border-radius: 12px; padding: 11px 16px; box-shadow: 0 8px 28px rgba(26,46,28,0.1); z-index: 4; border: 1px solid rgba(200,216,192,0.3); }
 .float-card-a { top: 48px; left: -20px; }
 .float-card-b { top: 220px; right: -30px; }
-.fc-num { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--mid); line-height: 1; }
+.fc-num { font-family: "Playfair Display", serif; font-size: 20px; font-weight: 700; color: var(--mid); line-height: 1; }
 .fc-label { font-size: 10.5px; color: var(--muted); font-weight: 500; margin-top: 3px; white-space: nowrap; }
 
 .section-tag { font-size: 10.5px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--mid); opacity: 0.7; margin-bottom: 16px; display: block; }
-.section-head { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3.5vw, 46px); font-weight: 700; line-height: 1.12; color: var(--forest); margin-bottom: 14px; }
+.section-head { font-family: "Playfair Display", serif; font-size: clamp(28px, 3.5vw, 46px); font-weight: 700; line-height: 1.12; color: var(--forest); margin-bottom: 14px; }
 .section-head em { font-style: italic; color: var(--mid); }
 .section-sub { font-size: 16px; color: var(--muted); line-height: 1.7; max-width: 520px; }
 
 .problem { background: var(--forest); padding: 96px 80px; position: relative; overflow: hidden; }
-.problem::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(125,200,125,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(125,200,125,0.03) 1px, transparent 1px); background-size: 48px 48px; }
-.problem::after { content: ''; position: absolute; bottom: -150px; right: -150px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(45,122,79,0.12) 0%, transparent 70%); }
+.problem::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(125,200,125,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(125,200,125,0.03) 1px, transparent 1px); background-size: 48px 48px; }
+.problem::after { content: ""; position: absolute; bottom: -150px; right: -150px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(45,122,79,0.12) 0%, transparent 70%); }
 .problem .section-tag { color: var(--light); }
 .problem .section-head { color: var(--cream); }
 .problem-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 80px; position: relative; z-index: 1; }
 .problem-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(200,216,192,0.1); border-radius: 16px; padding: 36px 32px; position: relative; overflow: visible; }
-.problem-card::before { content: attr(data-n); font-family: 'Playfair Display', serif; font-size: 72px; font-weight: 900; color: rgba(200,216,192,0.45); position: absolute; bottom: -10px; right: 16px; line-height: 1; pointer-events: none; z-index: 3; }
+.problem-card::before { content: attr(data-n); font-family: "Playfair Display", serif; font-size: 72px; font-weight: 900; color: rgba(200,216,192,0.45); position: absolute; bottom: -10px; right: 16px; line-height: 1; pointer-events: none; z-index: 3; }
 .pc-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(45,122,79,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-.problem-card h3 { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: var(--cream); margin-bottom: 10px; line-height: 1.25; }
+.problem-card h3 { font-family: "Playfair Display", serif; font-size: 19px; font-weight: 700; color: var(--cream); margin-bottom: 10px; line-height: 1.25; }
 .problem-card p { font-size: 13.5px; color: rgba(200,216,192,0.5); line-height: 1.7; }
 
 .how { padding: 96px 80px; background: var(--bg); }
 .how-center { text-align: center; margin-bottom: 64px; }
 .how-center .section-sub { margin: 0 auto; }
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 960px; margin: 0 auto; position: relative; }
-.steps::before { content: ''; position: absolute; top: 28px; left: calc(16.67% + 20px); right: calc(16.67% + 20px); height: 1px; background: linear-gradient(90deg, var(--mid), var(--light), var(--mid)); opacity: 0.3; z-index: 0; }
+.steps::before { content: ""; position: absolute; top: 28px; left: calc(16.67% + 20px); right: calc(16.67% + 20px); height: 1px; background: linear-gradient(90deg, var(--mid), var(--light), var(--mid)); opacity: 0.3; z-index: 0; }
 .step { background: var(--card); border-radius: 16px; padding: 36px 28px; border: 1px solid var(--border); position: relative; z-index: 1; display: flex; flex-direction: column; }
-.step-n { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 900; color: rgba(26,46,28,0.28); line-height: 1; margin-bottom: 12px; letter-spacing: -1px; }
-.step h3 { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: var(--forest); margin-bottom: 10px; line-height: 1.25; }
+.step-n { font-family: "Playfair Display", serif; font-size: 48px; font-weight: 900; color: rgba(26,46,28,0.28); line-height: 1; margin-bottom: 12px; letter-spacing: -1px; }
+.step h3 { font-family: "Playfair Display", serif; font-size: 19px; font-weight: 700; color: var(--forest); margin-bottom: 10px; line-height: 1.25; }
 .step p { font-size: 13.5px; color: var(--muted); line-height: 1.7; }
 .step-badge { margin-top: auto; padding-top: 18px; display: inline-block; align-self: flex-start; font-size: 10.5px; font-weight: 600; letter-spacing: 1px; color: var(--mid); text-transform: uppercase; background: rgba(45,122,79,0.08); padding: 4px 10px; border-radius: 5px; }
 
@@ -101,16 +92,16 @@ h1 em { font-style: italic; color: var(--mid); }
 .feat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 1040px; margin: 48px auto 0; }
 .feat { background: var(--card); border-radius: 16px; padding: 40px; border: 1px solid var(--border); }
 .feat-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(45,122,79,0.08); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-.feat h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--forest); margin-bottom: 10px; }
+.feat h3 { font-family: "Playfair Display", serif; font-size: 20px; font-weight: 700; color: var(--forest); margin-bottom: 10px; }
 .feat p { font-size: 13.5px; color: var(--muted); line-height: 1.75; max-width: 320px; }
 .feat-pill { margin-top: 18px; display: inline-block; background: rgba(45,122,79,0.07); color: var(--mid); font-size: 10.5px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 5px; }
 
 .stats { padding: 0 80px 96px; background: var(--bg); }
-.stats-box { background: var(--forest); border-radius: 20px; padding: 64px 72px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; text-align: center; position: relative; overflow: hidden; max-width: 1040px; margin: 0 auto; }
-.stats-box::before { content: ''; position: absolute; top: -120px; right: -120px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(45,122,79,0.18) 0%, transparent 70%); }
+.stats-box { background: var(--forest); border-radius: 20px; padding: 64px 72px; display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; position: relative; overflow: hidden; max-width: 1040px; margin: 0 auto; }
+.stats-box::before { content: ""; position: absolute; top: -120px; right: -120px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(45,122,79,0.18) 0%, transparent 70%); }
 .stat-item { position: relative; z-index: 1; padding: 0 20px; }
 .stat-item + .stat-item { border-left: 1px solid rgba(200,216,192,0.08); }
-.stat-n { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 900; color: var(--light); line-height: 1; margin-bottom: 10px; }
+.stat-n { font-family: "Playfair Display", serif; font-size: 52px; font-weight: 900; color: var(--light); line-height: 1; margin-bottom: 10px; }
 .stat-l { font-size: 14px; color: rgba(200,216,192,0.5); line-height: 1.55; }
 
 .faq { padding: 96px 80px; background: var(--card); }
@@ -119,12 +110,12 @@ h1 em { font-style: italic; color: var(--mid); }
 .faq-head .section-sub { margin: 0 auto; }
 .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .faq-item { background: var(--bg); border-radius: 14px; padding: 28px 32px; border: 1px solid var(--border); }
-.faq-item h4 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--forest); margin-bottom: 10px; line-height: 1.3; }
+.faq-item h4 { font-family: "Playfair Display", serif; font-size: 16px; font-weight: 700; color: var(--forest); margin-bottom: 10px; line-height: 1.3; }
 .faq-item p { font-size: 13.5px; color: var(--muted); line-height: 1.75; }
 
 .cta { padding: 96px 80px; background: var(--bg); text-align: center; }
 .cta-inner { max-width: 560px; margin: 0 auto; }
-.cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 4vw, 50px); font-weight: 900; color: var(--forest); line-height: 1.1; margin-bottom: 18px; }
+.cta h2 { font-family: "Playfair Display", serif; font-size: clamp(30px, 4vw, 50px); font-weight: 900; color: var(--forest); line-height: 1.1; margin-bottom: 18px; }
 .cta h2 em { font-style: italic; color: var(--mid); }
 .cta p { font-size: 16px; color: var(--muted); line-height: 1.7; margin-bottom: 36px; }
 .cta-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
@@ -134,7 +125,7 @@ h1 em { font-style: italic; color: var(--mid); }
 .appstore-btn-main { font-size: 15px; font-weight: 700; display: block; }
 
 footer { background: var(--forest); padding: 40px 80px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
-.footer-logo { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--sage); text-decoration: none; }
+.footer-logo { font-family: "Playfair Display", serif; font-size: 18px; font-weight: 700; color: var(--sage); text-decoration: none; }
 .footer-links { display: flex; gap: 28px; list-style: none; flex-wrap: wrap; }
 .footer-links a { font-size: 12.5px; color: rgba(200,216,192,0.75); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--sage); }
@@ -172,7 +163,7 @@ footer { background: var(--forest); padding: 40px 80px; display: flex; align-ite
 <body>
 
 <nav>
-  <a href="https://apps.apple.com/us/app/samwell/id6761632960" class="nav-logo">Samwell</a>
+  <a href="#" class="nav-logo">Samwell</a>
   <ul class="nav-links">
     <li><a href="#how">How it works</a></li>
     <li><a href="#features">Features</a></li>
@@ -215,7 +206,7 @@ footer { background: var(--forest); padding: 40px 80px; display: flex; align-ite
   <div class="problem-cards">
     <div class="problem-card reveal" data-n="01">
       <div class="pc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7dc87d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-      <h3>Can't afford an accountant</h3>
+      <h3>Can not afford an accountant</h3>
       <p>A CPA costs $300 to $500 per hour. Most gig workers guess, miss deductions, and overpay every single year.</p>
     </div>
     <div class="problem-card reveal" style="transition-delay:0.1s" data-n="02">
@@ -226,7 +217,7 @@ footer { background: var(--forest); padding: 40px 80px; display: flex; align-ite
     <div class="problem-card reveal" style="transition-delay:0.2s" data-n="03">
       <div class="pc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7dc87d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
       <h3>Don't know what they qualify for</h3>
-      <p>Home office, health insurance, equipment — most freelancers don't know what applies until it's too late to act.</p>
+      <p>Home office, health insurance, equipment. Most freelancers don't know what applies until it's too late to act.</p>
     </div>
   </div>
 </section>
@@ -304,14 +295,14 @@ footer { background: var(--forest); padding: 40px 80px; display: flex; align-ite
   <div class="faq-inner">
     <div class="faq-head reveal">
       <span class="section-tag">FAQ</span>
-      <h2 class="section-head">Questions? We've got answers.</h2>
+      <h2 class="section-head">Questions? We have answers.</h2>
       <p class="section-sub">Everything you need to know before you get started.</p>
     </div>
     <div class="faq-grid">
       <div class="faq-item reveal"><h4>Is Samwell free?</h4><p>Yes. The core app is completely free. Take the survey, use your monthly checklist, and track receipts at no cost.</p></div>
       <div class="faq-item reveal" style="transition-delay:0.1s"><h4>Is this a tax filing service?</h4><p>No. Samwell is a tax organization tool, not a filing service. We help you track and organize your deductions year-round so filing is never a scramble.</p></div>
       <div class="faq-item reveal" style="transition-delay:0.1s"><h4>Is my data safe?</h4><p>Your data is encrypted and stored securely. Receipt images never leave your device. We do not sell your data or use it for advertising. Ever.</p></div>
-      <div class="faq-item reveal" style="transition-delay:0.2s"><h4>Who is Samwell for?</h4><p>We built Samwell with freelancers, gig workers, and independent contractors in mind — Uber and Lyft drivers, DoorDash couriers, consultants, creatives, side hustlers. If you have income outside a regular paycheck and want to stay more organized at tax time, Samwell is for you.</p></div>
+      <div class="faq-item reveal" style="transition-delay:0.2s"><h4>Who is Samwell for?</h4><p>We built Samwell with freelancers, gig workers, and independent contractors in mind. Uber and Lyft drivers, DoorDash couriers, consultants, creatives, side hustlers. If you have income outside a regular paycheck and want to stay more organized at tax time, Samwell is for you.</p></div>
       <div class="faq-item reveal" style="transition-delay:0.2s"><h4>How long does setup take?</h4><p>About 2 minutes. Swipe through yes or no questions and your personalized deduction profile is ready instantly. No forms, no typing, just swipe.</p></div>
       <div class="faq-item reveal" style="transition-delay:0.3s"><h4>Are the deduction estimates accurate?</h4><p>All estimates are based on IRS-published rates and national averages. They are for organizational purposes only and do not constitute tax advice. Always consult a tax professional for your specific situation.</p></div>
     </div>
@@ -332,15 +323,21 @@ footer { background: var(--forest); padding: 40px 80px; display: flex; align-ite
 </section>
 
 <footer>
-  <a href="https://apps.apple.com/us/app/samwell/id6761632960" class="footer-logo">Samwell</a>
+  <a href="#" class="footer-logo">Samwell</a>
   <ul class="footer-links">
     <li><a href="https://mohanx-cloud.github.io/Samwell-Legal/privacy">Privacy Policy</a></li>
     <li><a href="https://mohanx-cloud.github.io/Samwell-Legal/terms">Terms of Service</a></li>
-    <li><a href="/cdn-cgi/l/email-protection#553d3039393a15263438223039397b342525"><span class="__cf_email__" data-cfemail="28404d444447685b49455f4d444406495858">[email&#160;protected]</span></a></li>
+    <li><a href="mailto:hello@samwell.app">hello@samwell.app</a></li>
   </ul>
   <span class="footer-copy">2026 Samwell. All rights reserved.</span>
   <p class="footer-disc">All deduction estimates are based on IRS-published rates and national averages. Samwell is not a tax preparation service, tax advisor, CPA, enrolled agent, or financial institution. Nothing in this app constitutes tax, financial, or legal advice. Consult a qualified tax professional before making any tax-related decisions or filing any tax return.</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-const obs = new In
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
+}, { threshold: 0.08 });
+document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
